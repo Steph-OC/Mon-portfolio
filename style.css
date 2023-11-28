@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/*
+ Theme Name: generatepress-child
+ Template: generatepress
+ Description: Thème enfant
+ Version: 0.1
+ */
+.site-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.content-projet {
+  display: flex;
+  flex-direction: column;
+  width: 89vw;
+  max-width: 1440px;
+}
+
+.media-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 16vh;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  flex-wrap: wrap;
+  padding-bottom: 14vh;
+  border-radius: 6px;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.projet-img, .projet-video {
+  flex: 1 1 22%;
+}
+
+.projet-video .video-block {
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+.projet-video .video-block video {
+  width: 100%;
+  height: auto;
+}
+
+.projet-img, .projet-desc {
+  flex: 1;
+  max-width: 50%;
+}
+
+.projet-img {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.projet-img .image-block {
+  margin-left: 2vw;
+}
+.projet-img .image-mobile-block {
+  position: absolute;
+  top: 70%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+  width: 7vw;
+  max-width: 200px;
+}
+.projet-img .image-mobile-block img {
+  width: 100%;
+  height: auto;
+}
+
+.projet-desc {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+  margin-top: 26vh;
+  background-color: rgba(221, 221, 221, 0.3607843137);
+  padding: 3%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 100%;
+}
+.projet-desc .desc-title {
+  font-family: "lato";
+  font-size: 1.5rem;
+}
+.projet-desc .projet-objectif, .projet-desc .projet-lang {
+  flex: 1;
+  max-width: 50%;
+}
+.projet-desc .langage-html {
+  color: #f16529;
+}
+.projet-desc .langage-php {
+  color: #777bb3;
+}
+.projet-desc .langage-css {
+  color: #3698d3;
+}
+.projet-desc .langage-javascript {
+  color: #f7df1e;
+}
+.projet-desc .langage-ajax {
+  color: #0683cb;
+}
+.projet-desc .projet-theme {
+  margin-top: 10vh;
+}
+
+.projet-code {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  margin-top: 10px;
+}
+
+.github-button {
+  background-color: #f56e28;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.github-button:hover {
+  background-color: #4ab2f4;
+}
+.github-button i {
+  margin-right: 5px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+.github-button:hover::after {
+  content: ">>";
+  transition: content 0.3s ease;
+}
+
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.project-navigation a {
+  text-decoration: none;
+  color: #0073aa;
+}
+.project-navigation a:hover {
+  color: #f56e28;
+}
+.project-navigation a.disabled {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+  .media-wrapper {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 72px;
+  }
+  .media-wrapper .projet-img, .media-wrapper .projet-video {
+    flex-basis: 100%;
+    max-width: 700px;
+  }
+  .media-wrapper .projet-img .image-mobile-block {
+    width: 17vw;
+  }
+  .projet-desc {
+    flex-direction: column;
+  }
+  .projet-desc .projet-objectif, .projet-desc .projet-lang {
+    max-width: 100%;
+  }
+  .projet-desc .projet-lang {
+    padding-left: 0vw;
+  }
+  .projet-desc .projet-theme {
+    margin-bottom: 5vh;
+  }
+  .projet-code {
+    justify-content: center;
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .projet-img, .projet-video {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .content-projet .projet-details .video-block {
+    max-width: 100%;
+  }
+  .content-projet .projet-desc {
+    flex-direction: column;
+  }
+  .content-projet .projet-desc .projet-objectif, .content-projet .projet-desc .projet-lang {
+    max-width: 100%;
+  }
+}
+body {
+  color: #333333; /* Gris foncé pour le texte principal */
+}
+
+h1, h2, h3 {
+  color: #444444; /* Un peu plus clair pour les titres */
+}
+
+p, ul {
+  color: #666666; /* Gris moyen pour les paragraphes */
+}
+
+footer, .caption {
+  color: #999999; /* Gris clair pour le texte secondaire */
+}
+
+.background {
+  background-color: #DDDDDD; /* Gris très clair pour l'arrière-plan */
+}/*# sourceMappingURL=style.css.map */
